@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 9</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 4</h1>
+					<p>
+						4.Дано масив елементів. Вивести на екран елементи, що більші за 100
+					</p>
+				</section>
+				<script>
+					//Вводимо кількість елементів масиву
+					const userNumberElements = parseInt(prompt('Введіть кількість елементів масиву'))
+					let arrayElements = []
+					function getRandomNumber(number) {
+					const minNum = 1
+					const maxNum = 200	
+					for (let i = 0; i < userNumberElements; i++) {
+					const	randomNumber = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
+						arrayElements[i] = randomNumber
+					}
+					return arrayElements
+					}
+					document.write(`
+					<div>Масив елементів: ${getRandomNumber(arrayElements)}</div>
+					<div>Елементи більші за 100 це:</div>
+					`)
+				console.log(arrayElements)
+				//перевіряємо кожен елемент масиву чи більший він за 100
+					for (const arrElement of arrayElements) {
+						if (arrElement > 100)
+						document.write(`<div>${arrElement}</div>`)
+
+					}
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

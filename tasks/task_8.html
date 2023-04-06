@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 9</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 8</h1>
+					<p>
+						8. Дано масив номерів авто. Сформувати новий масив тих, які починаються на «А»
+					</p>
+				</section>
+				<script>
+					let arrayNumAuto = ['AL4928', 'DL4929', 'TA4958', 'TL4957', 'AL4928', 'DN4929', 'AA4958', 'TL4937']
+					document.write(`
+					<div>Дано масив номерів авто: ${arrayNumAuto}</div>
+					`)
+					console.log(arrayNumAuto)
+
+					let newArrayNumAuto = arrayNumAuto.filter((num) => num[0] === 'A')
+					document.write(`
+					<div>Масив номерів, що починаються на А: ${newArrayNumAuto}</div>
+					`)
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

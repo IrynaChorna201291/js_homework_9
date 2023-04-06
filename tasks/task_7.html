@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 9</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 7</h1>
+					<p>
+						7.Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за 1000 грн. дати 30% знижки.
+					</p>
+				</section>
+				<script>
+
+
+
+
+					//вводимо кількість елементів масиву
+					// const userNumberElements = parseInt(prompt('Введіть кількість елементів масиву'))
+					// let array = []
+					// const minNum = 1
+					// const maxNum = 1000
+					// //пишемо цикл рандомних чисел для заповнення масиву
+					// for (let i = 0; i < userNumberElements; i++) {
+					// 	randomNumber = 1 + Math.floor(Math.random() * (maxNum - minNum + 1))	
+					// 	array[i] = randomNumber
+					// }
+					// document.write(`
+					// <div>Дано масив цін: ${array}</div>
+					// `)
+					// console.log(array)
+
+
+
+
+
+					//вводимо кількість елементів масиву
+					 const userNumberElements = parseInt(prompt('Введіть кількість елементів масиву'))
+					 //описуємо функцію для знаходження рандомних чисел
+					 let array = []
+					function getRandomNumber(number) {
+						const minNum = 100
+						const maxNum = 10000
+						for (let i = 0; i < userNumberElements; i++) {
+							const randomNumber = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
+							array[i] = randomNumber
+						}
+						return array
+					}
+					document.write(`
+					<div>Дано масив цін: ${getRandomNumber(array)}</div>
+					`)
+					console.log(array)
+
+					const maxPrice = 1000
+					const discount = 30 
+					array.forEach((element, index, baseArrRef) => {
+						if (element > maxPrice) 
+							baseArrRef[index] = element - (element * discount) / 100
+						
+					})
+					document.write(`
+					<div>Новий масив зі знижками: ${array}</div>`)
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

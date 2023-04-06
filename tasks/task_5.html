@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 9</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 5</h1>
+					<p>
+						5.Дано масив елементів. Знайти добуток додатних елементів
+					</p>
+				</section>
+				<script>
+					//Вводимо кількість елементів масиву
+					const userNumberElements = parseInt(prompt('Введіть кількість елементів масиву'))
+					let arrayElements = []
+					function getRandomNumber(number) {
+						const minNum = -100
+					const maxNum = 100
+					for (let i = 0; i < userNumberElements; i++) {
+						randomNumber = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
+						arrayElements[i] = randomNumber 
+					}
+					return arrayElements
+					}
+					document.write(`
+					<div>Дано масив: ${getRandomNumber(arrayElements)}</div>
+					`)
+					console.log(arrayElements)
+
+					let multiplicationPositiveNumber = 1
+					for (const element of arrayElements) {
+						if (element > 0) 
+							multiplicationPositiveNumber *= element
+					}
+					document.write(`
+					<div>Добуток додатніх елементів = ${multiplicationPositiveNumber}</div>
+					`)
+					console.log(multiplicationPositiveNumber)
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>
